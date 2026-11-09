@@ -2,403 +2,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101010">
-  <title>Digital Business Card</title>
-  <meta name="description" content="Digital business card and contact information">
-  <style>
-    :root {
-      --bg: #f4f4f2;
-      --card: #ffffff;
-      --text: #171717;
-      --muted: #6d6d6d;
-      --line: #e8e8e8;
-      --accent: #f28c28;
-      --dark: #111111;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#713d20">
+<title>Pandit Ji | Spiritual Services</title>
 
-    * { box-sizing: border-box; }
+<style>
+:root {
+  --saffron: #b96b24;
+  --dark: #713d20;
+  --gold: #c79b48;
+  --cream: #fff9ed;
+  --text: #34261c;
+}
 
-    body {
-      margin: 0;
-      padding: 26px 14px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .wrap {
-      width: 100%;
-      max-width: 480px;
-      margin: auto;
-    }
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #f3eadb;
+  color: var(--text);
+  padding: 20px 12px;
+}
 
-    .card {
-      overflow: hidden;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: 0 14px 40px rgba(0,0,0,.07);
-    }
+.card {
+  max-width: 440px;
+  margin: auto;
+  background: var(--cream);
+  border: 1px solid #dfc18b;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px #4b301522;
+}
 
-    .top {
-      padding: 28px 24px 24px;
-      text-align: center;
-      background: var(--dark);
-      color: white;
-    }
+.hero {
+  text-align: center;
+  padding: 32px 22px 25px;
+  background: linear-gradient(145deg,#713d20,#a65b23);
+  color: white;
+  position: relative;
+}
 
-    .logo {
-      width: 76px;
-      height: 76px;
-      margin: 0 auto 15px;
-      border-radius: 20px;
-      border: 1px solid #454545;
-      background: white;
-      object-fit: contain;
-      padding: 5px;
-    }
+.om {
+  font-size: 38px;
+  color: #ffdc8b;
+  margin-bottom: 12px;
+}
 
-    .initials {
-      display: grid;
-      place-items: center;
-      width: 76px;
-      height: 76px;
-      margin: 0 auto 15px;
-      border: 1px solid #454545;
-      border-radius: 20px;
-      background: #252525;
-      color: white;
-      font-size: 25px;
-      font-weight: bold;
-    }
+.profile {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  border: 4px solid #e9c77e;
+  object-fit: cover;
+  background: #fff1d5;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 27px;
-      line-height: 1.2;
-      overflow-wrap: anywhere;
-    }
+.hero h1 {
+  font-size: 27px;
+  margin-top: 13px;
+  color: #fff5df;
+}
 
-    .role {
-      margin: 9px 0 0;
-      color: #e6e6e6;
-      font-size: 14px;
-      line-height: 1.5;
-    }
+.designation {
+  color: #ffdfa3;
+  margin-top: 7px;
+  font-size: 14px;
+}
 
-    .company {
-      margin: 7px 0 0;
-      color: #ffb15e;
-      font-size: 15px;
-      font-weight: bold;
-    }
+.location {
+  font-size: 13px;
+  margin-top: 9px;
+  color: #f8e7ce;
+}
 
-    .actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 22px;
-    }
+.section {
+  padding: 22px 23px;
+  text-align: center;
+}
 
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 10px;
-      border: 1px solid #555;
-      border-radius: 12px;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.section h2 {
+  color: var(--dark);
+  font-size: 20px;
+  margin-bottom: 13px;
+}
 
-    .btn.primary {
-      color: #171717;
-      background: var(--accent);
-      border-color: var(--accent);
-    }
+.section p {
+  font-size: 14px;
+  line-height: 1.8;
+}
 
-    .content { padding: 24px; }
+.gold-line {
+  width: 55px;
+  height: 2px;
+  background: var(--gold);
+  margin: 12px auto;
+}
 
-    .section-title {
-      margin: 0 0 12px;
-      font-size: 16px;
-      font-weight: 700;
-    }
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
-    .about {
-      margin: 0 0 24px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
-      overflow-wrap: anywhere;
-    }
+.service {
+  padding: 13px 7px;
+  background: #fff1d8;
+  border: 1px solid #ead5ad;
+  border-radius: 12px;
+  font-size: 13px;
+}
 
-    .detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--line);
-    }
+.service span {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
 
-    .detail:last-child { border-bottom: 0; }
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 22px 22px;
+}
 
-    .ico {
-      display: grid;
-      place-items: center;
-      flex: 0 0 40px;
-      height: 40px;
-      border-radius: 12px;
-      background: #f2f2f2;
-      font-size: 18px;
-    }
+.btn {
+  text-decoration: none;
+  padding: 13px 7px;
+  border-radius: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
 
-    .detail-label {
-      margin-bottom: 5px;
-      color: var(--muted);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.call { background: #8b542d; }
+.whatsapp { background: #218b55; }
+.save { background: #b67a2d; }
+.location-btn { background: #555d72; }
 
-    .detail-value {
-      color: var(--text);
-      font-size: 14px;
-      line-height: 1.55;
-      overflow-wrap: anywhere;
-    }
+.booking {
+  margin: 0 22px 23px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #f9ebd1;
+  text-align: center;
+}
 
-    .detail-value a {
-      color: var(--text);
-      text-decoration: none;
-    }
+.booking h2 {
+  color: var(--dark);
+  font-size: 19px;
+  margin-bottom: 8px;
+}
 
-    .detail-value a:hover { text-decoration: underline; }
+.booking a {
+  display: block;
+  background: var(--dark);
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 9px;
+  margin-top: 13px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
 
-    .links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 20px;
-    }
+.social {
+  text-align: center;
+  padding: 5px 15px 23px;
+}
 
-    .link-btn {
-      padding: 13px 8px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      text-align: center;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: bold;
-      overflow-wrap: anywhere;
-    }
+.social a {
+  color: var(--dark);
+  text-decoration: none;
+  margin: 0 9px;
+  font-size: 13px;
+  font-weight: bold;
+}
 
-    .link-btn:hover { border-color: var(--accent); }
+.footer {
+  text-align: center;
+  padding: 17px;
+  background: #713d20;
+  color: #f8e4bb;
+  font-size: 12px;
+}
 
-    .footer {
-      padding: 17px;
-      background: #fafafa;
-      border-top: 1px solid var(--line);
-      color: #777;
-      text-align: center;
-      font-size: 11px;
-    }
+.footer strong {
+  color: #ffdc8b;
+}
 
-    @media (max-width: 360px) {
-      h1 { font-size: 23px; }
-      .content { padding: 19px; }
-      .top { padding: 25px 18px; }
-      .btn { font-size: 12px; }
-    }
-  </style>
+@media(max-width:360px) {
+  .hero h1 { font-size: 23px; }
+  .section { padding: 18px 15px; }
+}
+</style>
 </head>
+
 <body>
-  <main class="wrap">
-    <article class="card">
-      <header class="top">
-        <div id="brandMark" class="initials">TB</div>
-        <h1 id="name">Client Name</h1>
-        <p class="role" id="role">Designation</p>
-        <p class="company" id="company">Company Name</p>
 
-        <div class="actions">
-          <a class="btn primary" id="callBtn" href="tel:+919876543210">☎ Call Now</a>
-          <a class="btn" id="waBtn" href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp</a>
-          <button class="btn" id="saveBtn" type="button">＋ Save Contact</button>
-          <a class="btn" id="emailBtn" href="mailto:hello@example.com">✉ Email</a>
-        </div>
-      </header>
+<div class="card">
 
-      <div class="content">
-        <section>
-          <h2 class="section-title">About</h2>
-          <p class="about" id="about">
-            Add a short introduction about the person, their work and company.
-          </p>
-        </section>
+  <!-- PROFILE HEADER -->
+  <header class="hero">
+    <div class="om">ॐ</div>
 
-        <section>
-          <h2 class="section-title">Contact Information</h2>
-          <div id="details"></div>
-        </section>
+    <img class="profile"
+      src="https://placehold.co/300x300/f7e5c5/713d20?text=Pandit+Ji"
+      alt="Pandit Ji Profile Photo">
 
-        <section>
-          <h2 class="section-title" style="margin-top:24px">Connect Online</h2>
-          <div class="links" id="links"></div>
-        </section>
-      </div>
+    <h1 id="name">Pandit Shri Your Name Ji</h1>
+    <div class="designation" id="title">Vedic Pandit | Acharya</div>
+    <div class="location" id="city">📍 Your City, India</div>
+  </header>
 
-      <footer class="footer">
-        Digital Business Card · Powered by TapNxt
-      </footer>
-    </article>
-  </main>
+  <!-- ABOUT -->
+  <section class="section">
+    <h2>🙏 About Pandit Ji</h2>
+    <div class="gold-line"></div>
+    <p id="about">
+      With years of experience in Vedic rituals and Hindu traditions,
+      I provide spiritual guidance and perform religious ceremonies
+      with devotion and dedication.
+    </p>
+  </section>
 
-  <script>
-    // ========== CLIENT DETAILS: EDIT THIS SECTION ==========
+  <!-- SERVICES -->
+  <section class="section">
+    <h2>🪔 Religious Services</h2>
+    <div class="gold-line"></div>
 
-    const client = {
-      name: "SHUBHAM KAUSHIK",
-      designation: "FOUNDER AT TapNxt",
-      company: "TapNxt Pvt.Ltd",
-      about: "TapNxt products help professionals share information, collect reviews and create stronger connections.",
-      phone: "+91 9111299064",
-      whatsapp: "+91 9111299064",
-      email: "Kaushikshubham2909@gmail.com",
+    <div class="services" id="services">
+      <div class="service"><span>🪔</span>Griha Pravesh Puja</div>
+      <div class="service"><span>🙏</span>Satyanarayan Katha</div>
+      <div class="service"><span>🔱</span>Rudrabhishek</div>
+      <div class="service"><span>💍</span>Vivah Sanskar</div>
+      <div class="service"><span>📿</span>Bhagwat Katha</div>
+      <div class="service"><span>✨</span>Kundali Consultation</div>
+    </div>
+  </section>
 
-      address: "Kolkata India",
-      location: "Kolkata, West Bengal, India",
+  <!-- CONTACT BUTTONS -->
+  <div class="buttons">
+    <a class="btn call" id="callBtn" href="tel:+910000000000">📞 Call Now</a>
+    <a class="btn whatsapp" id="waBtn" href="https://wa.me/910000000000">💬 WhatsApp</a>
+    <button class="btn save" onclick="saveContact()">👤 Save Contact</button>
+    <a class="btn location-btn" id="mapBtn" href="https://maps.google.com" target="_blank">📍 Location</a>
+  </div>
 
-      website: "https://TapNxt.in",
-      linkedin: "https://www.linkedin.com/in/shubham-kaushik-13392a263",
+  <!-- BOOKING -->
+  <div class="booking">
+    <h2>Book a Puja / Consultation</h2>
+    <p>For puja bookings, religious ceremonies and spiritual guidance, please contact Pandit Ji.</p>
+    <a id="bookingBtn" href="https://wa.me/910000000000?text=Namaste%20Pandit%20Ji%2C%20I%20want%20to%20book%20a%20puja.">
+      Book Appointment on WhatsApp
+    </a>
+  </div>
 
-      // Optional: paste a PUBLIC image URL, or leave blank.
-      companyLogo: "https://kommodo.ai/i/q1LsM7n7AzvYoCr9ppwy",
-      profilePhoto: "https://kommodo.ai/i/q1LsM7n7AzvYoCr9ppwy"
-    };
+  <!-- SOCIAL MEDIA -->
+  <div class="social" id="social">
+    <a id="youtube" href="#" target="_blank" hidden>YouTube</a>
+    <a id="instagram" href="#" target="_blank" hidden>Instagram</a>
+    <a id="facebook" href="#" target="_blank" hidden>Facebook</a>
+  </div>
 
-    // ========== PAGE SETUP: NO NEED TO EDIT BELOW ==========
+  <footer class="footer">
+    ॥ शुभम भवतु ॥<br><br>
+    Digital Profile Powered by <strong>TapNxt</strong>
+  </footer>
 
-    const $ = id => document.getElementById(id);
+</div>
 
-    function cleanPhone(value) {
-      return value.replace(/[^\d+]/g, "");
-    }
+<script>
+/* ==================================
+   EDIT PANDIT JI DETAILS HERE ONLY
+================================== */
 
-    function safeURL(value) {
-      try {
-        const url = new URL(value);
-        return ["http:", "https:"].includes(url.protocol) ? url.href : "";
-      } catch {
-        return "";
-      }
-    }
+const pandit = {
+  name: "Acharya NITESH PANDEY ",
+  title: " Purn Vedic Pandit | Acharya",
+  city: "Ayodhya Uttar-pradesh",
 
-    function addDetail(icon, label, value, href) {
-      if (!value || value.startsWith("Enter ")) return "";
+  phone: "+91 6201833426",
+  whatsapp: "+91 6201833426",
 
-      const content = href
-        ? `<a href="${href}" target="_blank" rel="noopener">${escapeHTML(value)}</a>`
-        : escapeHTML(value);
+  email: "P.tpandeynitesh9297@gmail.com",
+  address: "Ayodhya Uttar-pradesh",
 
-      return `
-        <div class="detail">
-          <div class="ico">${icon}</div>
-          <div>
-            <div class="detail-label">${label}</div>
-            <div class="detail-value">${content}</div>
-          </div>
-        </div>`;
-    }
+  photo: "https://kommodo.ai/i/wzYHYWpVQ2l4LhtdhnCV?text=Pandit+Ji",
 
-    function escapeHTML(value) {
-      return String(value).replace(/[&<>"']/g, char => ({
-        "&": "&amp;", "<": "&lt;", ">": "&gt;",
-        '"': "&quot;", "'": "&#39;"
-      }[char]));
-    }
+  about: "Pandit Ji has extensive experience in Vedic rituals, Hindu ceremonies and spiritual guidance. Dedicated to performing every puja with devotion and traditional values.",
 
-    $("name").textContent = client.name;
-    $("role").textContent = client.designation;
-    $("company").textContent = client.company;
-    $("about").textContent = client.about;
-    document.title = `${client.name} | Digital Business Card`;
+  services: [
+    ["🪔", "Griha Pravesh Puja"],
+    ["🙏", "Satyanarayan Katha"],
+    ["🔱", "Rudrabhishek"],
+    ["💍", "Vivah Sanskar"],
+    ["📿", "Bhagwat Katha"],
+    ["✨", "Kundali Consultation"],
+    ["🌺", "Navgraha Shanti"],
+    ["🕉️", "Mahamrityunjaya Jaap"]
+    ["All 16-Sanskar"]
+  ],
 
-    const logo = safeURL(client.companyLogo);
-    const photo = safeURL(client.profilePhoto);
-    const mark = $("brandMark");
+  map: "https://share.google/O2XP7M7blQTnQ989Q",
 
-    if (logo || photo) {
-      const img = document.createElement("img");
-      img.className = "logo";
-      img.alt = logo ? `${client.company} logo` : `${client.name} photo`;
-      img.src = logo || photo;
-      img.onerror = () => {
-        img.remove();
-        mark.hidden = false;
-      };
-      mark.hidden = true;
-      mark.replaceWith(img);
-    } else {
-      mark.textContent = client.name
-        .split(/\s+/).filter(Boolean).slice(0, 2)
-        .map(part => part[0].toUpperCase()).join("");
-    }
+  youtube: "",
+  instagram: "",
+  facebook: ""
+};
 
-    const phone = cleanPhone(client.phone);
-    const wa = cleanPhone(client.whatsapp || client.phone).replace("+", "");
-    $("callBtn").href = `tel:${phone}`;
-    $("waBtn").href = `https://wa.me/${wa}`;
-    $("emailBtn").href = `mailto:${client.email}`;
+/* ==================================
+   PROFILE DISPLAY
+================================== */
 
-    $("details").innerHTML =
-      addDetail("☎", "Phone", client.phone, `tel:${phone}`) +
-      addDetail("✉", "Email", client.email, `mailto:${client.email}`) +
-      addDetail("⌂", "Office Address", client.address,
-        `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(client.address)}`) +
-      addDetail("⌖", "Location", client.location,
-        `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(client.location)}`) +
-      addDetail("◎", "Company Website", client.website, safeURL(client.website));
+document.title = pandit.name + " | Digital Profile";
 
-    const socialLinks = [
-      { label: "LinkedIn ↗", url: safeURL(client.linkedin) },
-      { label: "Company Website ↗", url: safeURL(client.website) }
-    ].filter(item => item.url);
+document.getElementById("name").textContent = pandit.name;
+document.getElementById("title").textContent = pandit.title;
+document.getElementById("city").textContent = "📍 " + pandit.city;
+document.getElementById("about").textContent = pandit.about;
 
-    $("links").innerHTML = socialLinks.map(item =>
-      `<a class="link-btn" href="${item.url}" target="_blank" rel="noopener">${item.label}</a>`
-    ).join("");
+document.querySelector(".profile").src = pandit.photo;
 
-    $("saveBtn").addEventListener("click", () => {
-      const vcard = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        `FN:${client.name}`,
-        `ORG:${client.company}`,
-        `TITLE:${client.designation}`,
-        `TEL;TYPE=CELL:${client.phone}`,
-        `EMAIL:${client.email}`,
-        `ADR;TYPE=WORK:;;${client.address};;;;`,
-        `URL:${safeURL(client.website)}`,
-        `NOTE:${client.about}`,
-        "END:VCARD"
-      ].join("\r\n");
+document.getElementById("callBtn").href = "tel:+" + pandit.phone;
+document.getElementById("waBtn").href = "https://wa.me/" + pandit.whatsapp;
+document.getElementById("mapBtn").href = pandit.map;
 
-      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `${client.name.replace(/[^a-z0-9]/gi, "-")}.vcf`;
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-  </script>
+document.getElementById("bookingBtn").href =
+  "https://wa.me/" + pandit.whatsapp +
+  "?text=" + encodeURIComponent("Namaste Pandit Ji, I would like to book a puja or consultation.");
+
+const servicesBox = document.getElementById("services");
+servicesBox.innerHTML = "";
+
+pandit.services.forEach(service => {
+  const item = document.createElement("div");
+  item.className = "service";
+
+  const emoji = document.createElement("span");
+  emoji.textContent = service[0];
+
+  item.appendChild(emoji);
+  item.appendChild(document.createTextNode(service[1]));
+  servicesBox.appendChild(item);
+});
+
+/* SOCIAL LINKS */
+
+["youtube", "instagram", "facebook"].forEach(platform => {
+  const link = document.getElementById(platform);
+  if (pandit[platform]) {
+    link.href = pandit[platform];
+    link.hidden = false;
+  }
+});
+
+/* SAVE CONTACT / VCARD */
+
+function saveContact() {
+  const escapeVcard = value => String(value || "")
+    .replace(/\\/g, "\\\\")
+    .replace(/\n/g, "\\n")
+    .replace(/,/g, "\\,")
+    .replace(/;/g, "\\;");
+
+  const vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "FN:" + escapeVcard(pandit.name),
+    "TITLE:" + escapeVcard(pandit.title),
+    "TEL;TYPE=CELL:+" + pandit.phone,
+    "EMAIL:" + escapeVcard(pandit.email),
+    "ADR;TYPE=WORK:;;" + escapeVcard(pandit.address),
+    "URL:" + window.location.href,
+    "END:VCARD"
+  ].join("\r\n");
+
+  const blob = new Blob([vcard], {type: "text/vcard;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "Pandit-Ji-Contact.vcf";
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+</script>
+
 </body>
 </html>
